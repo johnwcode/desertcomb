@@ -16,23 +16,22 @@
 <section class="example">
   <div class="container">
     <h3>Locations</h3>
-    <div *ngIf="characters$ | async as characters; else loading">
-      <div *ngFor="let character of characters" class="character-card">
+    <div *ngIf="locations$ | async as locations; else loading">
+      <div *ngFor="let location of locations" class="character-card">
         <div class="name">
-          {{ character.name }}
+          {{ location.name }}
         </div>
         <div class="row">
           <div class="column">
             <table class="email-contact">
               <tr>
-                <td>
-                  <svg style="width:14px;height:14px" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" />
-                  </svg>
-                </td>
+                <td></td>
+                <td>{{ location.locationType }}</td>
+              </tr>
+              <tr>
+                <td></td>
                 <td class="email">
-                  {{ character.email || '-' }}
+                  {{ location.phone || '-' }}
                 </td>
               </tr>
               <tr>
@@ -43,26 +42,30 @@
                   </svg>
                 </td>
                 <td>
-                  {{ character.contact.street }} {{ character.contact.streetNumber }}<br>
-                  {{ character.contact.zip }} {{ character.contact.city }}
+                  {{ location.address.streetNumber }} {{ location.address.street }}<br>
+                  {{ location.address.city }}, CA  {{ location.address.zip }}
                 </td>
+
               </tr>
             </table>
           </div>
           <div class="column">
             <div class="skills">
-              <span>Skills</span>
-              <ul>
-                <li *ngFor="let skill of character.skills">{{ skill }}</li>
-                <li *ngIf="character.skills.length == 0" class="no-skills">no skills</li>
-              </ul>
+              <span>Notes</span>
+              <p>
+                <span *ngFor="let note of location.notes">{{ note }}<br /></span>
+                <!-- <span *ngFor="let note of location.notes">{{ note }}
+                </span> -->
+                <span *ngIf="location.notes.length == 0" class="no-skills">no notes</span>
+              </p>
+              <p><a href="{{ location.link }}">Link</a></p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <ng-template #loading>
-      <div class="loading">
+      <div class=" loading">
         <div class="lds-ripple">
           <div></div>
           <div></div>

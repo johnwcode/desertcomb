@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  characters: {
-    spreadsheetId: '1AUKakIIgFSBgCBwpL86bU1zFEBo7G2kK6fq8WDqBqdQ',
-    worksheetId: 1,
-  },
+  locations: {
+    spreadsheetId: "1m3cncWqu-6iLHG0u9kBc7fsTZV-LDHSe03kognRpQ7M",
+    worksheetId: 1
+  }
 };
 
 /*
