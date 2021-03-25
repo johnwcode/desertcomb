@@ -17,7 +17,8 @@ export const locationAttributesMapping = {
     _prefix: "Note Date",
     _listField: true
   },
-  locationType: "Location Type"
+  locationType: "Location Type",
+  link: "Link"
 };
 
 export interface Location {
@@ -33,4 +34,5 @@ export interface Location {
   notes: string[];
   noteDates: string[];
   locationType: string;
+  link: string;
 }

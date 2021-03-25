@@ -25,11 +25,11 @@
           <div class="column">
             <table class="email-contact">
               <tr>
+                <td></td>
                 <td>{{ location.locationType }}</td>
               </tr>
               <tr>
-                <td>
-                </td>
+                <td></td>
                 <td class="email">
                   {{ location.phone || '-' }}
                 </td>
@@ -58,6 +58,7 @@
                 </span> -->
                 <span *ngIf="location.notes.length == 0" class="no-skills">no notes</span>
               </p>
+              <p>{{ location.link }}</p>
             </div>
           </div>
         </div>
