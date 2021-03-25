@@ -2,7 +2,7 @@ export const locationAttributesMapping = {
   id: "ID",
   name: "Name",
   phone: "Phone Number",
-  contact: {
+  address: {
     _prefix: "Contact",
     street: "Street",
     streetNumber: "Street Number",
@@ -19,7 +19,7 @@ export interface Location {
   id: string;
   name: string;
   phone: string;
-  contact: {
+  address: {
     street: string;
     streetNumber: string;
     zip: string;
