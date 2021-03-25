@@ -43,10 +43,10 @@
                   </svg>
                 </td>
                 <td>
-                  {{ location.address.street }}
-                  <!-- {{ location.address.streetNumber }}<br>
-                  {{ location.address.zip }} {{ location.address.city }} -->
+                  {{ location.address.streetNumber }} {{ location.address.street }}<br>
+                  {{ location.address.city }}, CA  {{ location.address.zip }}
                 </td>
+                <td>{{ location.locationType }}</td>
               </tr>
             </table>
           </div>

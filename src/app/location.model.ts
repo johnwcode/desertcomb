@@ -3,16 +3,17 @@ export const locationAttributesMapping = {
   name: "Name",
   phone: "Phone Number",
   address: {
-    _prefix: "Contact",
+    _prefix: "Address",
     street: "Street",
     streetNumber: "Street Number",
-    zip: "ZIP",
+    zip: "Zip",
     city: "City"
   },
   skills: {
     _prefix: "Skill",
     _listField: true
-  }
+  },
+  locationType: "Type"
 };
 
 export interface Location {
@@ -26,4 +27,5 @@ export interface Location {
     city: string;
   };
   skills: string[];
+  locationType: string;
 }
