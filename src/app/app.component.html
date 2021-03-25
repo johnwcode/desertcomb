@@ -53,12 +53,10 @@
           <div class="column">
             <div class="skills">
               <span>Notes</span>
-              <ul>
-                <li *ngFor="let note of location.notes">{{ note }}</li>
-                <!-- <span *ngFor="let note of location.notes">{{ note }}
+              <p *ngFor="let note of location.notes">{{ note }}</p>
+              <!-- <span *ngFor="let note of location.notes">{{ note }}
                 </span> -->
-                <span *ngIf="location.notes.length == 0" class="no-skills">no notes</span>
-              </ul>
+              <span *ngIf="location.notes.length == 0" class="no-skills">no notes</span>
             </div>
           </div>
         </div>
