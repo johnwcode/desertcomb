@@ -16,10 +16,10 @@
 <section class="example">
   <div class="container">
     <h3>Locations</h3>
-    <div *ngIf="characters$ | async as characters; else loading">
-      <div *ngFor="let character of characters" class="character-card">
+    <div *ngIf="locations$ | async as locations; else loading">
+      <div *ngFor="let location of locations" class="character-card">
         <div class="name">
-          {{ character.name }}
+          {{ location.name }}
         </div>
         <div class="row">
           <div class="column">
@@ -32,7 +32,7 @@
                   </svg>
                 </td>
                 <td class="email">
-                  {{ character.email || '-' }}
+                  {{ location.phone || '-' }}
                 </td>
               </tr>
               <tr>
@@ -43,8 +43,8 @@
                   </svg>
                 </td>
                 <td>
-                  {{ character.contact.street }} {{ character.contact.streetNumber }}<br>
-                  {{ character.contact.zip }} {{ character.contact.city }}
+                  <!-- {{ locaiton.address.street }} {{ location.address.streetNumber }}<br>
+                  {{ location.address.zip }} {{ location.address.city }} -->
                 </td>
               </tr>
             </table>
@@ -53,8 +53,8 @@
             <div class="skills">
               <span>Skills</span>
               <ul>
-                <li *ngFor="let skill of character.skills">{{ skill }}</li>
-                <li *ngIf="character.skills.length == 0" class="no-skills">no skills</li>
+                <li *ngFor="let skill of location.skills">{{ skill }}</li>
+                <li *ngIf="location.skills.length == 0" class="no-skills">no skills</li>
               </ul>
             </div>
           </div>
