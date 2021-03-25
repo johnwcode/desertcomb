@@ -54,7 +54,9 @@
             <div class="skills">
               <span>Notes</span>
               <ul>
-                <li *ngFor="let note of location.notes">{{ note }}</li>
+                <li *ngFor="let note of location.notes">{{ note }}
+                  <span *ngFor="let noteDate of location.noteDates">{{ noteDate }}</span>
+                </li>
                 <li *ngIf="location.notes.length == 0" class="no-skills">no skills</li>
               </ul>
             </div>

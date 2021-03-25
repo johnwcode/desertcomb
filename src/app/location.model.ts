@@ -13,6 +13,10 @@ export const locationAttributesMapping = {
     _prefix: "Note",
     _listField: true
   },
+  noteDates: {
+    _prefix: "Note Date",
+    _listField: true
+  },
   locationType: "Location Type"
 };
 
@@ -28,4 +32,5 @@ export interface Location {
   };
   locationType: string;
   notes: string[];
+  noteDates: string[];
 }
