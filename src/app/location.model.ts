@@ -30,7 +30,7 @@ export interface Location {
     zip: string;
     city: string;
   };
-  locationType: string;
   notes: string[];
   noteDates: string[];
+  locationType: string;
 }
